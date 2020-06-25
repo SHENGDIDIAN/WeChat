@@ -14,6 +14,7 @@ namespace Wx.Controllers
         {
             return View();
         }
+        //默认
         public string back()
         {
             return WxManager.Get_template() ;
