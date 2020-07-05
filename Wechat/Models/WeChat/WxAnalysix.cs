@@ -70,16 +70,24 @@ namespace Wx.Models.WeChat
     }
     public class Pay
     {
-        public string touser = "OPENID";
+        public string touser = "oJGyJvyADzhL1zl5Vrkutjp8-w9I";
         public string template_id = "ngqIpbwh8bUfcSsECmogfXcV14J0tQlEpBO27izEYtY";
         public string url = "http://weixin.qq.com/download";
-        public string topcolor = "#FF0000";
-        public string sm_data;
-        public string data(List<string> flag,List<string> context,List<string> color)
+         public string data
         {
-            JObject jObject = new JObject();
-            return "";
+            get
+            {
+                JArray data = new JArray();
+                JObject jo = new JObject();
+                jo.Add("value", "恭喜你购买成功！");
+                jo.Add("color", "#111111");
+                data.Add(jo);
+                return data.ToString();
+            }
         }
+        public List<string> color = new List<string>();
+        public List<string> value = new List<string>();
+        public List<string> flag = new List<string>();
        
     }
     public class data

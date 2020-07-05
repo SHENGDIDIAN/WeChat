@@ -17,7 +17,8 @@ namespace Wx.Controllers
         //默认
         public string back()
         {
-            return WxManager.Get_template() ;
+            //return WxManager.openId;
+            return WxManager.Send();
         }
         public static string GetMapPath(string strPath)
         {
